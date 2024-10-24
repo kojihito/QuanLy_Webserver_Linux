@@ -4,7 +4,7 @@
 
 - **I. Hướng dẫn chuẩn bị**
   - **1. Hoàn thành DNS server**
-  - **2. Cài đặt Apache để quản lý web server**
+  - **2. Cài đặt Apache server**
 - **II. Cấu hình HTTP**
   - **1. Tạo folder chứa website**
   - **2. Gán quyền**
@@ -15,3 +15,10 @@
 
 - **III. Cấu hình HTTPS**
 
+## I. Hướng dẫn chuẩn bị
+### 1. Hoàn thành DNS server
+```bash
+sudo yum update
+sudo yum install httpd
+```
+### 2. Cài đặt Apache server
