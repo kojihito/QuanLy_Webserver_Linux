@@ -17,16 +17,16 @@
 
 ## I. Hướng dẫn chuẩn bị
 ### 1. Hoàn thành DNS server
-**Để có thể thực hiện quản lý web server, trước tiên ta cần có DNS hoàn chỉnh**
+- Để có thể thực hiện quản lý web server, trước tiên ta cần có DNS hoàn chỉnh
 ![image](https://github.com/user-attachments/assets/3b76edde-7958-4251-985f-7a3683c9a50e)
 
 
-**Để có trang 2 trang web mang tên miền là sgu.edu.vn và vnlab.net, DNS của 2 domain này đều phải trỏ về IP của máy web server là 192.168.1.1**
+- Để có trang 2 trang web mang tên miền là sgu.edu.vn và vnlab.net, DNS của 2 domain này đều phải trỏ về IP của máy web server là 192.168.1.1
 
 
 ### 2. Cài đặt Apache server
 
-**Cài đặt Apache, cần đảm bảo máy có kết nối mạng**:
+- Để cài đặt Apache, cần đảm bảo máy có kết nối mạng:
 ```yum install httpd```
 
 ## II. Cấu hình HTTP
