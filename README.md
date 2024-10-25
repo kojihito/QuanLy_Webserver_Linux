@@ -18,6 +18,7 @@
 ## I. Hướng dẫn chuẩn bị
 ### 1. Hoàn thành DNS server
 - Để có thể thực hiện quản lý web server, trước tiên ta cần có DNS hoàn chỉnh
+
 ![image](https://github.com/user-attachments/assets/3b76edde-7958-4251-985f-7a3683c9a50e)
 
 
