@@ -186,7 +186,7 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/pr
 sudo systemctl restart httpd
 ```
 
-- Sau đó, mở trang web từ trình duyệt firefox có sẵn hoặc từ máy client, nếu ra trang web như bên dưới là đã hoàn thành
+- Cuối cùng, mở trang web từ trình duyệt firefox có sẵn hoặc từ máy client, nếu ra trang web như bên dưới là đã hoàn thành
 
 ![2024-10-25_160435](https://github.com/user-attachments/assets/9ccc80e1-c150-4287-8c77-67742ea17b12)
 
