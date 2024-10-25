@@ -36,6 +36,7 @@
 mkdir -p /var/www/html/vnlab.net
 mkdir -p /var/www/html/sgu.edu.vn
 ```
+### 2. Gán quyền
 - Cấp quyền cho trang web hoạt động
 ```
 chown -R apache:apache /var/www/html/vnlab.net
@@ -47,6 +48,7 @@ chmod 755 /var/www/
 chmod 755 /var/www/html
 ```
 
+### 3. Cài đặt virtual host
 - Cài đặt virtual host để cấu hình từng trang web với tên miền đã tạo
 - Vào đường dẫn ```/etc/httpd/conf/httpd.conf```
 - Thêm đoạn code bên dưới vào cuối file
@@ -80,6 +82,8 @@ chứa nội dung website
      ServerAlias sgu.edu.vn   # đây là Alias của website 
 </VirtualHost> 
 ```
+
+### 4. Tạo file index.html
 - Sau đó, vào thư mục chứa các website tạo file ```index.html```
 ```
 cd /var/www/html/vnlab.net
@@ -96,12 +100,15 @@ chmod +x /var/www/html/vnlab.net/index.html
 Chmod +x /var/www/html/sgu.edu.vn/index.html 
 ```
 
+### 5. Khởi động apache
 - Sau đó, khởi động Apache
 ```
 systemctl enable httpd 
 systemctl start httpd
 systemctl restart httpd
 ```
+
+### 6. Kiểm tra website
 - Cuối cùng, xem website từ một máy client hoặc xem trực tiếp từ trình duyệt web firefox có sẵn trên CentOS
 
 ![image](https://github.com/user-attachments/assets/4b8dc4d7-ab47-4a65-aa29-e3530158370d)
