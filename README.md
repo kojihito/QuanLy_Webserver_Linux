@@ -14,6 +14,11 @@
   - **6. Kiểm tra website**
 
 - **III. Cấu hình HTTPS**
+  - **1. Cài đặt module ssl**
+  - **2. Tạo thư mục lưu trữ website**
+  - **3. Tạo chứng chỉ SSL tự ký**
+  - **4. Cấu hình Virtual host cho HTTPS**
+  - **5. Kiểm tra**
 
 ## I. Hướng dẫn chuẩn bị
 ### 1. Hoàn thành DNS server
@@ -116,6 +121,75 @@ systemctl restart httpd
 
 ![image](https://github.com/user-attachments/assets/4b8dc4d7-ab47-4a65-aa29-e3530158370d)
 ![image](https://github.com/user-attachments/assets/2e0caf34-9345-44d4-8597-8ebd9899dcec)
+
+## III. Cấu hình HTTPS
+**Để đảm bảo, nên cấu hình HTTPS trên một máy ảo khác, đồng thời cài đặt và khởi động lại Apache**
+### 1. Cài đặt module ssl
+- Mở cổng 80 và 443 trên tường lửa
+```
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
+```
+- Cài đặt ```mod_ssl```
+```
+sudo yum install mod_ssl -y
+```
+
+### 2. Tạo thư mục lưu trữ website
+- Tạo thư mục DocumentRoot cho website ```sgu.edu.vn```
+```
+sudo mkdir -p /var/www/sgu.edu.vn
+```
+- Cấp quyền cho thư mục
+```
+sudo chown -R apache:apache /var/www/sgu.edu.vn
+```
+### 3. Tạo chứng chỉ SSL tự ký
+- Tạo một chứng chỉ tự ký:
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/private/sgu.key -out /etc/pki/tls/certs/sgu.crt
+```
+- Sau đó tự điền các thông tin theo yêu cầu
+
+### 4. Cấu hình Virtual Host cho HTTPS
+- Tạo file cấu hình cho website tại ```/etc/httpd/conf.d/sgu.edu.vn.conf```
+```
+<VirtualHost *:443>
+    ServerName sgu.edu.vn
+    DocumentRoot /var/www/sgu.edu.vn
+
+    SSLEngine on
+    SSLCertificateFile /etc/pki/tls/certs/sgu.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/sgu.key
+
+    <Directory /var/www/sgu.edu.vn>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog /var/log/httpd/sgu.edu.vn-error.log
+    CustomLog /var/log/httpd/sgu.edu.vn-access.log combined
+</VirtualHost>
+
+## Chuyển hướng http sang https
+<VirtualHost *:80>
+    ServerName sgu.edu.vn
+    Redirect permanent / https://sgu.edu.vn/
+</VirtualHost>
+```
+
+### 5. Kiểm tra
+- Nhập ```sudo apachectl configtest``` nếu hệ thống trả về ```Syntax OK``` thì tiếp tục, nếu không, kiểm tra lại các file cấu hình
+- Sau đó, khởi động lại Apache:
+```
+sudo systemctl restart httpd
+```
+
+- Sau đó, mở trang web từ trình duyệt firefox có sẵn hoặc từ máy client, nếu ra trang web như bên dưới là đã hoàn thành
+
+![2024-10-25_160435](https://github.com/user-attachments/assets/9ccc80e1-c150-4287-8c77-67742ea17b12)
+
 
 
 
