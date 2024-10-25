@@ -86,12 +86,13 @@ chứa nội dung website
 
 ### 4. Tạo file index.html
 - Vào thư mục chứa các website tạo file ```index.html```
+- **đối với ```vnlab.net```
 ```
 cd /var/www/html/vnlab.net
 gedit index.html
 ```
 
-- Làm tương tự với tên miền ```sgu.edu.vn```
+- **Làm tương tự với ```sgu.edu.vn```
 ```
 cd /var/www/html/sgu.edu.vn
 gedit index/html
