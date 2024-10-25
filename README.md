@@ -102,7 +102,7 @@ gedit index.html
 - Khi hoàn thành, gán quyền cho file ```index.html``` với câu lệnh
 ```
 chmod +x /var/www/html/vnlab.net/index.html
-Chmod +x /var/www/html/sgu.edu.vn/index.html 
+chmod +x /var/www/html/sgu.edu.vn/index.html 
 ```
 
 ### 5. Khởi động apache
