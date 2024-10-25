@@ -85,7 +85,7 @@ chứa nội dung website
 ```
 
 ### 4. Tạo file index.html
-- Sau đó, vào thư mục chứa các website tạo file ```index.html```
+- Vào thư mục chứa các website tạo file ```index.html```
 ```
 cd /var/www/html/vnlab.net
 gedit index.html
