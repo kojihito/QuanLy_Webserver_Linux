@@ -67,8 +67,7 @@ NameVirtualHost *:80
 ```
 <VirtualHost *:80> 
     ServerAdmin webmaster@vnlab.net    
-     DocumentRoot /var/www/html/vnlab.net     #đây là đường dẫn đến thư mục 
-chứa nội dung website 
+     DocumentRoot /var/www/html/vnlab.net     #đây là đường dẫn đến thư mục chứa nội dung website 
      ServerName vnlab.net    # đây là domain của website 
      ServerAlias vnlab.net   # đây là Alias của website 
 </VirtualHost>
@@ -77,8 +76,7 @@ chứa nội dung website
 ```
 <VirtualHost *:80> 
     ServerAdmin webmaster@sgu.edu.vn 
-     DocumentRoot /var/www/html/sgu.edu.vn     #đây là đường dẫn đến thư mục 
-chứa nội dung website 
+     DocumentRoot /var/www/html/sgu.edu.vn     #đây là đường dẫn đến thư mục chứa nội dung website 
      ServerName sgu.edu.vn    # đây là domain của website 
      ServerAlias sgu.edu.vn   # đây là Alias của website 
 </VirtualHost> 
@@ -102,7 +100,7 @@ gedit index.html
 - Khi hoàn thành, gán quyền cho file ```index.html``` với câu lệnh
 ```
 chmod +x /var/www/html/vnlab.net/index.html
-chmod +x /var/www/html/sgu.edu.vn/index.html 
+chmod +x /var/www/html/sgu.edu.vn/index.html
 ```
 
 ### 5. Khởi động apache
