@@ -86,13 +86,12 @@ chứa nội dung website
 
 ### 4. Tạo file index.html
 - Vào thư mục chứa các website tạo file ```index.html```
-- **đối với ```vnlab.net```
+- Đối với ```vnlab.net```
 ```
 cd /var/www/html/vnlab.net
 gedit index.html
 ```
-
-- **Làm tương tự với ```sgu.edu.vn```
+- Làm tương tự với ```sgu.edu.vn```
 ```
 cd /var/www/html/sgu.edu.vn
 gedit index/html
@@ -115,7 +114,7 @@ systemctl restart httpd
 ```
 
 ### 6. Kiểm tra website
-- Cuối cùng, xem website từ một máy client hoặc xem trực tiếp từ trình duyệt web firefox có sẵn trên CentOS
+- Cuối cùng, xem website từ một máy client hoặc xem trực tiếp từ trình duyệt web Firefox có sẵn trên CentOS
 
 ![image](https://github.com/user-attachments/assets/4b8dc4d7-ab47-4a65-aa29-e3530158370d)
 ![image](https://github.com/user-attachments/assets/2e0caf34-9345-44d4-8597-8ebd9899dcec)
