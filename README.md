@@ -94,7 +94,7 @@ gedit index.html
 - Làm tương tự với ```sgu.edu.vn```
 ```
 cd /var/www/html/sgu.edu.vn
-gedit index/html
+gedit index.html
 ```
 - Nhập nội dung bất kỳ cho file index.html và save
 ![image](https://github.com/user-attachments/assets/045b6b46-6cf8-476a-b5a1-0563e7b52410)
