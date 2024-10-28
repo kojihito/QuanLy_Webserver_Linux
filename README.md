@@ -190,6 +190,8 @@ sudo systemctl restart httpd
 
 ![2024-10-25_160435](https://github.com/user-attachments/assets/9ccc80e1-c150-4287-8c77-67742ea17b12)
 
+- Có thể tùy chọn truyền file html hoặc php vào nếu muốn tùy chỉnh nội dung hiển thị
+
 
 
 
