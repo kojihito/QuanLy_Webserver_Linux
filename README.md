@@ -123,7 +123,7 @@ systemctl restart httpd
 ![image](https://github.com/user-attachments/assets/2e0caf34-9345-44d4-8597-8ebd9899dcec)
 
 ## III. Cấu hình HTTPS
-**Để đảm bảo, nên cấu hình HTTPS trên một máy ảo khác, đồng thời cài đặt và khởi động lại Apache**
+**Để đảm bảo, nên cấu hình HTTPS trên một máy ảo khác, đồng thời cũng cần cài đặt lại Aphache cũng như tạo DNS server tương tự với máy cấu hình HTTP**
 ### 1. Cài đặt module ssl
 - Mở cổng 80 và 443 trên tường lửa
 ```
